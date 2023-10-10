@@ -34,7 +34,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v4
       with:
-        images: answerdev/answer
+        images: vkarz/answer
         tags: |
           type=ref,enable=true,priority=600,prefix=,suffix=,event=branch
           type=semver,pattern={{version}}
@@ -58,7 +58,7 @@ jobs:
         platforms: linux/amd64,linux/arm64
         push: true
         file: ./Dockerfile
-        tags: answerdev/answer:${{ inputs.tag_name }}
+        tags: vkarz/answer:${{ inputs.tag_name }}
         labels: ${{ steps.meta.outputs.labels }}
 
 

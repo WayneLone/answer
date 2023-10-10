@@ -21,7 +21,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v4
       with:
-        images: answerdev/answer
+        images: vkarz/answer
         tags: |
           type=raw,value=latest
           type=ref,enable=true,priority=600,prefix=,suffix=,event=branch
