@@ -21,7 +21,7 @@ RUN apk --no-cache add build-base git bash nodejs npm && npm install -g pnpm cor
     && make install-ui-packages clean build
 
 RUN chmod 755 answer
-RUN ["/bin/bash","-c","script/build_plugin.sh"]
+# RUN ["/bin/bash","-c","script/build_plugin.sh"]
 RUN cp answer /usr/bin/answer
 
 RUN mkdir -p /data/uploads && chmod 777 /data/uploads \
