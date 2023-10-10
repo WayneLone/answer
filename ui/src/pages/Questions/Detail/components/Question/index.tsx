@@ -3,6 +3,9 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 
+import hljs from 'highlight.js';
+import 'highlight.js/styles/atom-one-light.css';
+
 import {
   Tag,
   Actions,
@@ -58,6 +61,7 @@ const Index: FC<Props> = ({ data, initPage, hasAnswer, isLogged }) => {
     }
 
     htmlRender(ref.current);
+    hljs.highlightAll();
   }, [ref.current]);
 
   if (!data?.id) {
